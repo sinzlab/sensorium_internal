@@ -8,5 +8,7 @@ services:
     volumes:
       - .:/project
       - ./notebooks:/notebooks
+    env_file: .env
     environment:
-      - JUPYTER_PASSWORD=
+      - DISPLAY=$DISPLAY
+    shm_size: 40g
